@@ -13,10 +13,10 @@
 | Back-End            | Spring Boot v3.3.5, Spring Security 6, Spring Data JPA |
 | Databases           | Hibernate, MySQL                    |
 | Services            | None (Local)                        |
-<img src="https://github.com/user-attachments/assets/0a0a5485-c553-4129-a261-5f69ff029697" alt="image" width="50%">
+<img src="https://github.com/user-attachments/assets/6ad4282f-a88d-472a-811c-c30ef771648f" alt="image" width="50%">
 
 ### DB 모델링
-<img src="https://github.com/user-attachments/assets/6d4444ee-7d97-4ed4-abc5-9f96bcc6363e" alt="image" width="50%">
+<img src="https://github.com/user-attachments/assets/b89b7486-15aa-49aa-8e5f-6257d055a264" alt="image" width="50%">
 
 
 ### API 명세서
