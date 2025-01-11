@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/mainLayout}">
+
+<th:block layout:fragment="script">
+    <script th:inline="javascript">
+        $(document).ready(function(){
+            var errorMessage = [[${errorMessage}]];
+            if(errorMessage != null){
+                alert(errorMessage);
+            }
+            bindDomEvent();
+        });
+
+        function bindDomEvent(){
+            // 여기에 추가적인 JavaScript 이벤트가 필요하면 작성 가능합니다.
+        }
+    </script>
+</th:block>
+
+<th:block layout:fragment="css">
+    <style>
+        .input-group {
+            margin-bottom : 15px;
+        }
+        .fieldError {
+            color: #bd2130;
+        }
+    </style>
+</th:block>
+
+<div layout:fragment="content">
+    <form role="form" method="post" th:object="${reviewDto}">
+
+        <p class="h2">
+            리뷰 작성
+        </p>
+
+        <!-- 주문 ID는 숨겨진 필드로 설정 -->
+        <input type="hidden" th:field="*{orderId}">
+
+        <!-- 주문한 상품 목록에서 선택 -->
+        <div class="form-group">
+            <label for="itemId">상품 선택</label>
+            <select th:field="*{itemId}" class="custom-select">
+                <option value="" disabled selected>주문한 상품을 선택하세요</option>
+                <th:block th:each="orderItem : ${orderItems}">
+                    <option th:value="${orderItem.item.id}" th:text="${orderItem.item.itemName}"></option>
+                </th:block>
+            </select>
+        </div>
+        <p th:if="${#fields.hasErrors('itemId')}" th:errors="*{itemId}" class="fieldError">상품을 선택해주세요</p>
+
+        <!-- 리뷰 상세 내용 입력 -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">리뷰 상세</span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea" th:field="*{reviewDetail}" placeholder="리뷰 내용을 입력해주세요"></textarea>
+        </div>
+        <p th:if="${#fields.hasErrors('reviewDetail')}" th:errors="*{reviewDetail}" class="fieldError">리뷰 내용을 입력해주세요</p>
+
+        <!-- 별점 입력 -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">별점</span>
+            </div>
+            <input type="number" th:field="*{rating}" class="form-control" placeholder="1~5점 사이의 별점을 입력해주세요" min="1" max="5">
+        </div>
+        <p th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}" class="fieldError">별점을 1~5 사이로 입력해주세요</p>
+
+        <!-- 리뷰 작성 버튼 -->
+        <div th:if="${#strings.isEmpty(reviewDto.id)}" style="text-align: center">
+            <button th:formaction="@{/reviews}" type="submit" class="btn btn-primary">리뷰 작성</button>
+        </div>
+
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+
+    </form>
+
+</div>
+
+</html>
