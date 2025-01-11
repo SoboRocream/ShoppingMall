@@ -11,32 +11,36 @@ Front-End:	HTML, CSS, JS, BootStrap, Thymeleaf v3.3.0
 Back-End:	Spring Boot v3.3.5, Spring Security 6, Spring Data JPA
 Databases:	Hibernate, MySQL
 Services:	None (Local)
-![image](https://github.com/user-attachments/assets/0a0a5485-c553-4129-a261-5f69ff029697)
+<img src="https://github.com/user-attachments/assets/0a0a5485-c553-4129-a261-5f69ff029697" alt="image" width="50%">
 
 ### DB 모델링
-![image](https://github.com/user-attachments/assets/6d4444ee-7d97-4ed4-abc5-9f96bcc6363e)
+<img src="https://github.com/user-attachments/assets/6d4444ee-7d97-4ed4-abc5-9f96bcc6363e" alt="image" width="50%">
+
 
 ### API 명세서
-Function	Method	EndPoint	
-회원 가입 페이지	Get	/members/new
-회원 가입	Post	/members/new
-로그인 페이지	Get	/members/login
-로그인	Post	/members/login
-로그아웃	Get	/member/logout
-장바구니 담기	Post	/cart
-장바구니 페이지	Get	/cart
-장바구니 상품 수정	Patch	/cartItem/{cartItemId}
-장바구니 상품 제거	Delete	/cartItem/{cartItemId}
-장바구니 상품 주문	Post	/cart/orders
-상품 등록 페이지	Get	/admin/item/new
-상품 등록	Post	/admin/item/new
-상품 조회	Get	/item/{itemId}, /admin/items", "/admin/items/{page}, /admin/item/{itemId}
-상품 수정	Post	/admin/item/{itemId}
-주문하기	Post	/order
-주문 내역 페이지	Get	/orders, /orders/{page}
-주문 취소	Post	/order/{orderID}/cancel
-메인 페이지 조회	Get	/
-에러 페이지	Get	/error
+
+| Function           | Method   | EndPoint                                     |
+|--------------------|----------|----------------------------------------------|
+| 회원 가입 페이지      | GET      | /members/new                                |
+| 회원 가입           | POST     | /members/new                                |
+| 로그인 페이지        | GET      | /members/login                              |
+| 로그인             | POST     | /members/login                              |
+| 로그아웃            | GET      | /member/logout                              |
+| 장바구니 담기        | POST     | /cart                                       |
+| 장바구니 페이지       | GET      | /cart                                       |
+| 장바구니 상품 수정    | PATCH    | /cartItem/{cartItemId}                      |
+| 장바구니 상품 제거    | DELETE   | /cartItem/{cartItemId}                      |
+| 장바구니 상품 주문    | POST     | /cart/orders                                |
+| 상품 등록 페이지      | GET      | /admin/item/new                             |
+| 상품 등록           | POST     | /admin/item/new                             |
+| 상품 조회           | GET      | /item/{itemId}, /admin/items,               |
+|                    |          | /admin/items/{page}, /admin/item/{itemId}   |
+| 상품 수정           | POST     | /admin/item/{itemId}                        |
+| 주문하기            | POST     | /order                                      |
+| 주문 내역 페이지      | GET      | /orders, /orders/{page}                     |
+| 주문 취소           | POST     | /order/{orderID}/cancel                     |
+| 메인 페이지 조회      | GET      | /                                           |
+| 에러 페이지          | GET      | /error                                      |
 
 ### 진행과정
 -	https://rocreamsnote.notion.site/1373557098428009902dec48dde64c2d?pvs=74
