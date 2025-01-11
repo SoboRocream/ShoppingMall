@@ -6,11 +6,13 @@
 전자정부 프레임워크의 기술 스택을 이론 및 예제 실습을 통해 학습한 다음, 실제로 어떻게 동작하는 지를 이해하고자 기말 과제로 쇼핑몰 프로젝트를 구현.
 
 ### 프로젝트 환경
-Programming Languages:	Java SDK 23
-Front-End:	HTML, CSS, JS, BootStrap, Thymeleaf v3.3.0
-Back-End:	Spring Boot v3.3.5, Spring Security 6, Spring Data JPA
-Databases:	Hibernate, MySQL
-Services:	None (Local)
+| Category            | Details                              |
+|---------------------|--------------------------------------|
+| Programming Languages | Java SDK 23                         |
+| Front-End           | HTML, CSS, JS, BootStrap, Thymeleaf v3.3.0 |
+| Back-End            | Spring Boot v3.3.5, Spring Security 6, Spring Data JPA |
+| Databases           | Hibernate, MySQL                    |
+| Services            | None (Local)                        |
 <img src="https://github.com/user-attachments/assets/0a0a5485-c553-4129-a261-5f69ff029697" alt="image" width="50%">
 
 ### DB 모델링
